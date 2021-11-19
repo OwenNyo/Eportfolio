@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owen's E-Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_PI90cCavFszPZE0ot00mM");
+      })();
+    </script>
+</head>
+
+<body>
+    
+    <div id='Homeid' class="front">
+        <canvas></canvas>
+        <header class="landingHeader">
+            <img src="assets/profilepicture.jpeg" class="frontimage" alt=""> 
+            <nav>
+                <ul>
+                    <li><a href="#Homeid">Home</a></li>
+                    <li><a href="#Projectid">Projects</a></li>
+                    <li><a href="#Languageid">Languages</a></li>
+                    <li onclick="toggleModal();"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <div class="introduction">
+                <h1>Hello! My name is</h1>
+                <span class='imp' id='namer'>Owen.</span>
+                <p>I'm a driven, self-taught <span class='imp' >Frontend Developer</span> who is passionate about offering excellent user experience and resolving difficult user interface challenges. </p>
+            </div>
+        </section>
+        
+
+        <div class="modal">
+            <div class="modal__half modal__about">
+              <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+              <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer.</h4>
+              <p class="modal__para">
+                I'm a 20 year-old Singaporean <b class="orange">frontend software developer</b> who has worked on
+                side projects like <b class="orange">E-Portfolio</b> and <b class="orange">Task Tracker</b>.
+                <br>
+                I currently looking to advance myself by learning and becoming proficient in </b><b class="orange">React</b> and <b class="orange"> Javascript</b> 
+                in my free time!
+              </p>
+
+            <div class="modal__languages">
+                <figure class="modal__language">
+                <img class="modal__language--img"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                    alt="">
+                <span class="language__name">HTML</span>
+                </figure>
+                <figure class="modal__language">
+                <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                    alt="">
+                <span class="language__name">CSS</span>
+                </figure>
+                <figure class="modal__language">
+                <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                    alt="">
+                <span class="language__name">JavaScript</span>
+                </figure>
+                <figure class="modal__language">
+                    <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+                    alt="">
+                    <span class="language__name">React</span>
+                </figure>
+            </div>
+            </div>
+
+            <div class="modal__half modal__contact">
+            <i class="fas fa-times modal__exit click" onclick="toggleModal();"></i>
+            <h3 class="modal__title modal__title--contact">
+                Let's have a chat!
+            </h3>
+            <h3 class="modal__sub-title modal__sub-title--contact">
+                I'm currently open to new opportunities.
+            </h3>
+            <form id="contact__form" onsubmit="contact(event)">
+                <div class="form__item">
+                <label class="form__item--label">Name</label>
+                <input class="input" name="user_name" type="text" placeholder= "John Doe"required></input>
+                </div>
+                <div class="form__item">
+                <label class="form__item--label">Email</label>
+                <input class="input" name="user_email" type="email" placeholder="John@rocketmail.com" required></input>
+                </div>
+                <div class="form__item">
+                <label class="form__item--label">Message</label>
+                <textarea class="input" name="user_message" type="text" placeholder="Drop me a message here!"required></textarea>
+                </div>
+                <button id="contact__submit" class="form__submit">
+                Send it my way
+                </button>
+            </form>
+            <div class="modal__overlay modal__overlay--loading">
+                <i class="fas fa-spinner"></i>
+            </div>
+            <div class="modal__overlay modal__overlay--success">
+                Thanks for the message! Looking forward to speaking to you soon.
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="projects">
+        <header id='Projectid'>
+            <h1>Here are some of my <span class='imp'>projects</span></h1>
+        </header>
+        <section>
+            <div class="project">
+                <img src="assets/projectpic1.jpeg" alt="">
+                <div class="textimg">
+                    <h1>Personal Website</h1>
+                    <h3>Designed with HTML | CSS | JAVASCRIPT</h3>
+                    <p>With the lack of a professional and qualified platform, coupled with the free time in national service, i decided to design a high-quality personal website, which acts as a foundation for future projects.Learning new technology skills, constantly upgrading myself, and designing new projects are part of the growing process.</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="assets/.png" alt="">
+                <div class="textimg">
+                    <h1></h1>
+                    <h3></h3>
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="assets/.png" alt="">
+                <div class="textimg">
+                    <h1></h1>
+                    <h3></h3>
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+
+
+    <div id="Languageid" class="languagep">
+        <header id="#Languageid">
+            <h1>My programming <span class='imp'>languages</span></h1>
+        </header>
+        <section>
+            <div class="languagecontainer">
+                <img class='lci' src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="">
+            </div>
+            <div class="languagecontainer">
+                <img class='lci' src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
+            </div>
+            <div class="languagecontainer">
+                <img class='lci' src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
+            </div>
+            <div class="languagecontainer">
+                <img class='lci' src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="">
+            </div>
+        </section>
+    </div>
+
+
+    <footer class='te'>
+        <nav>
+            <ul>
+                <li><a href="#Homeid">Home</a></li>
+                <li><a href="#Projectid">Projects</a></li>
+                <li><a href="#langid">Languages</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="https://www.linkedin.com/in/owen-nyo-0a2b301b1" target="_blank">Contact</a></li>
+                <li><a href="https://www.instagram.com/owennwy/" target='_blank'>Instagram</a></li>
+            </ul>
+        </nav>
+    <div class="copyright">Copyright &copy; 2021 Owen Nyo</div>
+    </div>
+
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
